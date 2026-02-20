@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>I backtested a 400K views YouTube trading strategy (the results were B - Solana Builder&#x27;s Edge</title>
+    <meta name="title" content="I backtested a 400K views YouTube trading strategy (the results were B - Solana Builder&#x27;s Edge">
+    <meta name="description" content="Let me tell you about the time I decided to fact-check one of those viral YouTube trading videos that had everyone talking. You know the ones – flashy...">
+    <meta name="keywords" content="primary, longtail">
+    <meta name="author" content="Morgan Blake">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://the-edge-weekly.github.io/newsletters/solana-builders-edge/2026-02-20-i-backtested-a-400k-views-youtube-trading-strategy-the.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://the-edge-weekly.github.io/newsletters/solana-builders-edge/2026-02-20-i-backtested-a-400k-views-youtube-trading-strategy-the.html">
+    <meta property="og:title" content="I backtested a 400K views YouTube trading strategy (the results were B">
+    <meta property="og:description" content="Let me tell you about the time I decided to fact-check one of those viral YouTube trading videos that had everyone talking. You know the ones – flashy...">
+    <meta property="article:published_time" content="2026-02-20">
+    <meta property="article:author" content="Morgan Blake">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://the-edge-weekly.github.io/newsletters/solana-builders-edge/2026-02-20-i-backtested-a-400k-views-youtube-trading-strategy-the.html">
+    <meta name="twitter:title" content="I backtested a 400K views YouTube trading strategy (the results were B">
+    <meta name="twitter:description" content="Let me tell you about the time I decided to fact-check one of those viral YouTube trading videos that had everyone talking. You know the ones – flashy...">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "I backtested a 400K views YouTube trading strategy (the results were B",
+        "description": "Let me tell you about the time I decided to fact-check one of those viral YouTube trading videos that had everyone talking. You know the ones – flashy...",
+        "author": {
+            "@type": "Person",
+            "name": "Morgan Blake"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Solana Builder&#x27;s Edge"
+        },
+        "datePublished": "2026-02-20",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://the-edge-weekly.github.io/newsletters/solana-builders-edge/2026-02-20-i-backtested-a-400k-views-youtube-trading-strategy-the.html"
+        }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.7;
+            color: #1a202c;
+            background: #f7fafc;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #f56565 0%, #ed64a6 50%, #9f7aea 100%);
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="white" fill-opacity="0.1"/></svg>');
+            opacity: 0.3;
+        }
+
+        .newsletter-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .tagline {
+            color: rgba(255,255,255,0.95);
+            margin: 10px 0 0;
+            font-size: 15px;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Author Section */
+        .author-section {
+            display: flex;
+            align-items: center;
+            padding: 25px 30px;
+            background: linear-gradient(to bottom, #fff5f5 0%, #ffffff 100%);
+            border-bottom: 1px solid #fed7d7;
+        }
+
+        .author-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f56565, #ed64a6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+            margin-right: 15px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-size: 17px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 4px;
+        }
+
+        .author-meta {
+            font-size: 14px;
+            color: #718096;
+        }
+
+        .author-meta span {
+            margin-right: 12px;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 40px 30px;
+        }
+
+        .article-title {
+            font-size: 40px;
+            font-weight: 800;
+            color: #1a202c;
+            margin: 0 0 20px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .article-subtitle {
+            font-size: 20px;
+            color: #4a5568;
+            font-weight: 400;
+            margin: 0 0 35px;
+            line-height: 1.5;
+        }
+
+        .content p {
+            margin: 0 0 20px;
+            font-size: 17px;
+            line-height: 1.8;
+            color: #2d3748;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2d3748;
+            margin: 50px 0 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #f56565;
+            position: relative;
+        }
+
+        .content h2::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #9f7aea;
+        }
+
+        .content h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2d3748;
+            margin: 35px 0 15px;
+        }
+
+        .content strong {
+            color: #1a202c;
+            font-weight: 600;
+        }
+
+        .content em {
+            font-style: italic;
+            color: #4a5568;
+        }
+
+        .content ul, .content ol {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .content li {
+            margin: 12px 0;
+            line-height: 1.8;
+            font-size: 17px;
+            color: #2d3748;
+        }
+
+        .content a {
+            color: #f56565;
+            text-decoration: none;
+            border-bottom: 1px solid #fed7d7;
+        }
+
+        .content a:hover {
+            border-bottom-color: #f56565;
+        }
+
+        .content blockquote {
+            border-left: 4px solid #9f7aea;
+            padding: 20px 25px;
+            margin: 30px 0;
+            background: #fff5f5;
+            font-style: italic;
+            color: #4a5568;
+            font-size: 18px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .content code {
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #2d3748;
+        }
+
+        .content pre {
+            background: #1a202c;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        .content pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #fed7d740 100%);
+            border-left: 4px solid #f56565;
+            padding: 25px;
+            margin: 35px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .highlight-box p {
+            font-size: 18px;
+            font-weight: 500;
+            color: #2d3748;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        /* Key Takeaways */
+        .key-takeaway {
+            background: linear-gradient(135deg, #fef5e7 0%, #fef9f2 100%);
+            border: 2px solid #f6ad55;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .key-takeaway h3 {
+            color: #c05621;
+            font-size: 20px;
+            margin: 0 0 18px;
+            font-weight: 700;
+        }
+
+        .key-takeaway ul {
+            margin: 0;
+            padding-left: 25px;
+        }
+
+        .key-takeaway li {
+            color: #2d3748;
+            margin: 10px 0;
+        }
+
+        /* Share Section */
+        .share-section {
+            background: #f7fafc;
+            padding: 30px;
+            text-align: center;
+            margin: 50px 0;
+            border-radius: 10px;
+            border: 2px dashed #cbd5e0;
+        }
+
+        .share-section h3 {
+            font-size: 18px;
+            color: #2d3748;
+            margin: 0 0 20px;
+            font-weight: 600;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .share-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: none;
+            cursor: pointer;
+        }
+
+        .share-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .share-button.twitter {
+            background: #1da1f2;
+            color: white;
+        }
+
+        .share-button.linkedin {
+            background: #0077b5;
+            color: white;
+        }
+
+        .share-button.copy {
+            background: #48bb78;
+            color: white;
+        }
+
+        .share-button.copy.copied {
+            background: #2f855a;
+        }
+
+        /* Related Articles */
+        .related-section {
+            padding: 30px;
+            background: #f7fafc;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .related-section h3 {
+            font-size: 18px;
+            color: #2d3748;
+            margin: 0 0 20px;
+            font-weight: 600;
+        }
+
+        .related-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .related-list li {
+            margin: 12px 0;
+        }
+
+        .related-list a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #f56565;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 12px 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+
+        .related-list a:hover {
+            border-color: #f56565;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .related-list a::before {
+            content: "→";
+            color: #f56565;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #f56565 0%, #ed64a6 50%, #9f7aea 100%);
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="1" fill="white" fill-opacity="0.1"/></svg>');
+            opacity: 0.4;
+        }
+
+        .cta-section h3 {
+            color: white;
+            font-size: 26px;
+            margin: 0 0 12px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.95);
+            margin: 0 0 30px;
+            font-size: 17px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #f56565;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2d3748;
+            color: #cbd5e0;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0 0 10px;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            margin: 20px 0 0;
+            padding: 0;
+        }
+
+        .footer-links a {
+            color: #cbd5e0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsive */
+        @media only screen and (max-width: 600px) {
+            .header {
+                padding: 35px 20px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .article-title {
+                font-size: 32px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .content h2 {
+                font-size: 24px;
+            }
+
+            .content p, .content li {
+                font-size: 16px;
+            }
+
+            .author-section {
+                padding: 20px;
+            }
+
+            .share-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .share-button {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="newsletter-badge">⚡ Solana Builder&#x27;s Edge</div>
+            <h1>Weekly insights for Solana developers</h1>
+            <p class="tagline">Building the future, one insight at a time</p>
+        </div>
+
+        <!-- Author Section -->
+        <div class="author-section">
+            <div class="author-avatar">MB</div>
+            <div class="author-info">
+                <div class="author-name">Morgan Blake</div>
+                <div class="author-meta">
+                    <span>📅 Feb 20, 2026</span>
+                    <span>⏱️ 4 min read</span>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <h1 class="article-title">I backtested a 400K views YouTube trading strategy (the results were B</h1>
+            <p class="article-subtitle">Let me tell you about the time I decided to fact-check one of those viral YouTube trading videos that had everyone talking. You know the ones – flashy...</p>
+
+            <h1 id="i-backtested-a-400k-views-youtube-trading-strategy-the-results-were-brutal">I Backtested a 400K Views YouTube Trading Strategy (The Results Were BRUTAL)</h1>
+<p>Let me tell you about the time I decided to fact-check one of those viral YouTube trading videos that had everyone talking. You know the ones – flashy thumbnails, promises of easy profits, and <strong>strategy</strong> breakdowns that look almost too good to be true.</p>
+<p>Well, I found one with nearly 400,000 views showcasing a "foolproof" trading system. The YouTuber presented 100 trades with a 56% win rate, 1.5 risk-reward ratio, and around 40% returns. On paper? Absolutely incredible.</p>
+<p>So naturally, I had to dig deeper.</p>
+<h2 id="heres-why-this-matters-more-than-you-think">Here's Why This Matters More Than You Think</h2>
+<p>We're living in the golden age of financial content. Every day, thousands of trading videos flood YouTube, promising viewers the secret to consistent profits. These videos rack up hundreds of thousands of views, influencing countless traders to adopt strategies that may not have been properly tested.</p>
+<p>The problem? Most of these "backtests" involve cherry-picked periods or insufficient sample sizes. When someone shows you 100 trades over a few months and claims it's a proven system, that's like judging a movie by watching the trailer.</p>
+<p>The strategy I tested used three indicators:<br />
+- Triple Supertrend<br />
+- Stochastic RSI<br />
+- 200-period EMA on EUR/USD 1-hour charts</p>
+<p>The setup looked legitimate. The presenter seemed knowledgeable. The results were compelling. But here's what happened when I extended the backtest beyond those carefully selected 100 trades.</p>
+<h2 id="what-you-need-to-know-the-harsh-reality-behind-viral-trading-strategies">What You Need to Know: The Harsh Reality Behind Viral Trading Strategies</h2>
+<p>After running this strategy through a proper backtest spanning multiple years and thousands of trades, the results were eye-opening – and not in a good way.</p>
+<p><strong>The 56% win rate? It dropped to 41%.</strong></p>
+<p>The beautiful 40% returns? They turned into consistent losses over longer periods. What looked like a money-printing machine became a slow bleed of capital.</p>
+<p>Here's the critical insight: <strong>most YouTube trading strategies suffer from survivorship bias and curve fitting</strong>. Content creators often:</p>
+<ul>
+<li>Test strategies during favorable market conditions</li>
+<li>Adjust parameters until they get appealing results</li>
+<li>Focus on short timeframes that don't reveal long-term weaknesses</li>
+<li>Ignore transaction costs and slippage</li>
+</ul>
+<p>The Triple Supertrend system worked beautifully during trending markets but got absolutely demolished during choppy, sideways price action. The Stochastic RSI generated false signals left and right when volatility spiked. And that 200-period EMA? It lagged so much that by the time it confirmed a trend, most of the move was already over.</p>
+<p>This isn't to bash the original content creator – they may have genuinely believed in their system. But it highlights a massive problem in our industry: the difference between marketing-friendly backtests and rigorous strategy validation.</p>
+<h2 id="how-to-apply-this-your-action-plan-for-evaluating-trading-strategies">How to Apply This: Your Action Plan for Evaluating Trading Strategies</h2>
+<p>Before you implement any strategy you see online, here's your filter system:</p>
+<p><strong>Demand longer backtests.</strong> If someone shows you 100 trades, ask for 1,000. If they test 6 months, you need at least 2-3 years of data across different market conditions.</p>
+<p><strong>Look for walk-forward analysis.</strong> A robust strategy should work on out-of-sample data – periods the creator didn't use to develop the system.</p>
+<p><strong>Question the metrics.</strong> High win rates often come with poor risk-reward ratios. Amazing returns might ignore realistic trading costs. Always dig deeper than surface-level statistics.</p>
+<p><strong>Test it yourself.</strong> Most trading platforms offer backtesting capabilities. Don't take anyone's word for it – verify the results independently.</p>
+<p><strong>Consider market context.</strong> A strategy that worked during the 2020-2021 bull run might fail miserably in a bear market. Make sure your backtest includes various market cycles.</p>
+<p>The YouTube strategy I tested worked perfectly during strong trending periods but failed catastrophically when markets turned choppy. This is incredibly common – strategies get optimized for specific conditions and break down when those conditions change.</p>
+<h2 id="put-this-into-practice-today">Put This Into Practice Today</h2>
+<p>Here's your homework: Find a trading strategy that caught your attention recently. Now apply the filter system above.</p>
+<p>Start by extending the backtest period. If the original test covered 3 months, run it for 2 years. Include the March 2020 crash, the 2021 rally, and the 2022 bear market. See how those perfect equity curves hold up.</p>
+<p>Next, calculate realistic costs. Add spreads, commissions, and slippage to every trade. That 40% annual return might become 15% – or worse – once you account for real-world friction.</p>
+<p>Finally, test the strategy on different assets and timeframes. If it only works on EUR/USD 1-hour charts, that's a red flag. Robust strategies should show some consistency across multiple markets.</p>
+<p>I've made this mistake myself – getting seduced by impressive backtests only to watch strategies fall apart in live trading. The difference between paper profits and real profits often comes down to thorough testing and realistic expectations.</p>
+<p>Remember: if a trading strategy was truly as profitable as those viral videos suggest, why would someone share it with 400,000 strangers instead of quietly making millions?</p>
+<p>The most valuable trading education often comes from understanding what doesn't work – and why.</p>
+<hr />
+<p><strong>What's your experience with YouTube trading strategies?</strong> Have you ever backtested a viral system only to discover it wasn't as profitable as advertised? Reply and share your story – I'd love to hear about your own reality checks in the world of social media trading advice.</p>
+        </div>
+
+        <!-- Share Section -->
+        <div class="share-section">
+            <h3>📢 Found this valuable? Share it with your network</h3>
+            <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?text=I backtested a 400K views YouTube trading strategy (the results were B&url=https://the-edge-weekly.github.io/newsletters/solana-builders-edge/2026-02-20-i-backtested-a-400k-views-youtube-trading-strategy-the.html"
+                   target="_blank" rel="noopener noreferrer" class="share-button twitter">
+                    🐦 Share on Twitter
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://the-edge-weekly.github.io/newsletters/solana-builders-edge/2026-02-20-i-backtested-a-400k-views-youtube-trading-strategy-the.html"
+                   target="_blank" rel="noopener noreferrer" class="share-button linkedin">
+                    💼 Share on LinkedIn
+                </a>
+                <button onclick="copyLink()" class="share-button copy" id="copyBtn">
+                    📋 <span id="copyText">Copy Link</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Related Articles -->
+        <div class="related-section">
+            <h3>📚 You might also enjoy</h3>
+            <ul class="related-list" id="relatedArticles">
+                <!-- Populated by JavaScript -->
+            </ul>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h3>Enjoyed this article?</h3>
+            <p>Get insights like this delivered to your inbox every week</p>
+            <a href="https://81625e5b.sibforms.com/serve/MUIFAEgzdWICesnSlnpCWyUOV0XXD5YW_GuBsONT86vND4ZS_9UJAi1n-wTClKn60a-L18L1HbMKec4vIAXCg0gX7R1pvtdkIy6bPjiccPHH0XSEYYZGcT0J8lXVg8-LJJOkZtDKYl-TK23clobZWOlCPVBKy8tnKOavbNC7bYCneoH6eoy9Z1UY7cK8IlfHRHCoJDBuCuG_GvhmYA==" class="cta-button">Subscribe to Solana Builder&#x27;s Edge →</a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>⚡ <strong>Solana Builder&#x27;s Edge</strong> • Weekly insights for Solana developers</p>
+            <p style="font-size: 13px; color: #a0aec0;">© 2026 Solana Builder&#x27;s Edge. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Unsubscribe</a>
+                <a href="#">Email Preferences</a>
+                <a href="#">Archive</a>
+                <a href="#">About</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const btn = document.getElementById('copyBtn');
+                const text = document.getElementById('copyText');
+                btn.classList.add('copied');
+                text.textContent = 'Copied!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    text.textContent = 'Copy Link';
+                }, 2000);
+            });
+        }
+
+        // Load related articles
+        (function() {
+            const relatedByNewsletter = {
+                'solana_builders_edge': [
+                    { title: 'Building on Solana: Smart Contract Security Best Practices', url: '#' },
+                    { title: '5 Solana Protocols Every Developer Should Study', url: '#' },
+                    { title: 'Understanding Solana Program Derived Addresses', url: '#' }
+                ],
+                'ai_tools_weekly': [
+                    { title: 'The Rise of Local LLMs: Privacy-First AI Development', url: '#' },
+                    { title: 'Building AI Agents: A Practical Guide', url: '#' },
+                    { title: 'Top 10 AI Tools for Developers in 2024', url: '#' }
+                ],
+                'automate_this': [
+                    { title: 'Automating Your Development Workflow with GitHub Actions', url: '#' },
+                    { title: 'Building a Personal Automation Stack', url: '#' },
+                    { title: 'No-Code vs Low-Code: When to Use Each', url: '#' }
+                ]
+            };
+
+            const newsletterSlug = 'solana-builders-edge';
+            const related = relatedByNewsletter[newsletterSlug] || [];
+            const container = document.getElementById('relatedArticles');
+
+            if (related.length === 0) {
+                container.parentElement.style.display = 'none';
+                return;
+            }
+
+            related.slice(0, 3).forEach(article => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = article.url;
+                a.textContent = article.title;
+                if (article.url === '#') {
+                    a.onclick = (e) => { e.preventDefault(); alert('More articles coming soon!'); };
+                }
+                li.appendChild(a);
+                container.appendChild(li);
+            });
+        })();
+    </script>
+</body>
+</html>
