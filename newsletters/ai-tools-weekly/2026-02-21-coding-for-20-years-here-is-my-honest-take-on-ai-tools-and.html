@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Coding for 20+ years, here is my honest take on AI tools and the minds - AI Tools Weekly</title>
+    <meta name="title" content="Coding for 20+ years, here is my honest take on AI tools and the minds - AI Tools Weekly">
+    <meta name="description" content="Let&#x27;s talk about something that&#x27;s been keeping me up at night – and it&#x27;s not debugging legacy code at 2 AM. After two decades of coding, watching lang...">
+    <meta name="keywords" content="primary, longtail">
+    <meta name="author" content="Alex Chen">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://the-edge-weekly.github.io/newsletters/ai-tools-weekly/2026-02-21-coding-for-20-years-here-is-my-honest-take-on-ai-tools-and.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://the-edge-weekly.github.io/newsletters/ai-tools-weekly/2026-02-21-coding-for-20-years-here-is-my-honest-take-on-ai-tools-and.html">
+    <meta property="og:title" content="Coding for 20+ years, here is my honest take on AI tools and the minds">
+    <meta property="og:description" content="Let&#x27;s talk about something that&#x27;s been keeping me up at night – and it&#x27;s not debugging legacy code at 2 AM. After two decades of coding, watching lang...">
+    <meta property="article:published_time" content="2026-02-21">
+    <meta property="article:author" content="Alex Chen">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://the-edge-weekly.github.io/newsletters/ai-tools-weekly/2026-02-21-coding-for-20-years-here-is-my-honest-take-on-ai-tools-and.html">
+    <meta name="twitter:title" content="Coding for 20+ years, here is my honest take on AI tools and the minds">
+    <meta name="twitter:description" content="Let&#x27;s talk about something that&#x27;s been keeping me up at night – and it&#x27;s not debugging legacy code at 2 AM. After two decades of coding, watching lang...">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Coding for 20+ years, here is my honest take on AI tools and the minds",
+        "description": "Let&#x27;s talk about something that&#x27;s been keeping me up at night – and it&#x27;s not debugging legacy code at 2 AM. After two decades of coding, watching lang...",
+        "author": {
+            "@type": "Person",
+            "name": "Alex Chen"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AI Tools Weekly"
+        },
+        "datePublished": "2026-02-21",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://the-edge-weekly.github.io/newsletters/ai-tools-weekly/2026-02-21-coding-for-20-years-here-is-my-honest-take-on-ai-tools-and.html"
+        }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.7;
+            color: #1a202c;
+            background: #f7fafc;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #38b2ac 0%, #319795 50%, #2c7a7b 100%);
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="white" fill-opacity="0.1"/></svg>');
+            opacity: 0.3;
+        }
+
+        .newsletter-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .tagline {
+            color: rgba(255,255,255,0.95);
+            margin: 10px 0 0;
+            font-size: 15px;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Author Section */
+        .author-section {
+            display: flex;
+            align-items: center;
+            padding: 25px 30px;
+            background: linear-gradient(to bottom, #e6fffa 0%, #ffffff 100%);
+            border-bottom: 1px solid #b2f5ea;
+        }
+
+        .author-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #38b2ac, #319795);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+            margin-right: 15px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-size: 17px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 4px;
+        }
+
+        .author-meta {
+            font-size: 14px;
+            color: #718096;
+        }
+
+        .author-meta span {
+            margin-right: 12px;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 40px 30px;
+        }
+
+        .article-title {
+            font-size: 40px;
+            font-weight: 800;
+            color: #1a202c;
+            margin: 0 0 20px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .article-subtitle {
+            font-size: 20px;
+            color: #4a5568;
+            font-weight: 400;
+            margin: 0 0 35px;
+            line-height: 1.5;
+        }
+
+        .content p {
+            margin: 0 0 20px;
+            font-size: 17px;
+            line-height: 1.8;
+            color: #2d3748;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2d3748;
+            margin: 50px 0 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #38b2ac;
+            position: relative;
+        }
+
+        .content h2::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #2c7a7b;
+        }
+
+        .content h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2d3748;
+            margin: 35px 0 15px;
+        }
+
+        .content strong {
+            color: #1a202c;
+            font-weight: 600;
+        }
+
+        .content em {
+            font-style: italic;
+            color: #4a5568;
+        }
+
+        .content ul, .content ol {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .content li {
+            margin: 12px 0;
+            line-height: 1.8;
+            font-size: 17px;
+            color: #2d3748;
+        }
+
+        .content a {
+            color: #38b2ac;
+            text-decoration: none;
+            border-bottom: 1px solid #b2f5ea;
+        }
+
+        .content a:hover {
+            border-bottom-color: #38b2ac;
+        }
+
+        .content blockquote {
+            border-left: 4px solid #2c7a7b;
+            padding: 20px 25px;
+            margin: 30px 0;
+            background: #e6fffa;
+            font-style: italic;
+            color: #4a5568;
+            font-size: 18px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .content code {
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #2d3748;
+        }
+
+        .content pre {
+            background: #1a202c;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        .content pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea40 100%);
+            border-left: 4px solid #38b2ac;
+            padding: 25px;
+            margin: 35px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .highlight-box p {
+            font-size: 18px;
+            font-weight: 500;
+            color: #2d3748;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        /* Key Takeaways */
+        .key-takeaway {
+            background: linear-gradient(135deg, #fef5e7 0%, #fef9f2 100%);
+            border: 2px solid #f6ad55;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .key-takeaway h3 {
+            color: #c05621;
+            font-size: 20px;
+            margin: 0 0 18px;
+            font-weight: 700;
+        }
+
+        .key-takeaway ul {
+            margin: 0;
+            padding-left: 25px;
+        }
+
+        .key-takeaway li {
+            color: #2d3748;
+            margin: 10px 0;
+        }
+
+        /* Share Section */
+        .share-section {
+            background: #f7fafc;
+            padding: 30px;
+            text-align: center;
+            margin: 50px 0;
+            border-radius: 10px;
+            border: 2px dashed #cbd5e0;
+        }
+
+        .share-section h3 {
+            font-size: 18px;
+            color: #2d3748;
+            margin: 0 0 20px;
+            font-weight: 600;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .share-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: none;
+            cursor: pointer;
+        }
+
+        .share-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .share-button.twitter {
+            background: #1da1f2;
+            color: white;
+        }
+
+        .share-button.linkedin {
+            background: #0077b5;
+            color: white;
+        }
+
+        .share-button.copy {
+            background: #48bb78;
+            color: white;
+        }
+
+        .share-button.copy.copied {
+            background: #2f855a;
+        }
+
+        /* Related Articles */
+        .related-section {
+            padding: 30px;
+            background: #f7fafc;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .related-section h3 {
+            font-size: 18px;
+            color: #2d3748;
+            margin: 0 0 20px;
+            font-weight: 600;
+        }
+
+        .related-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .related-list li {
+            margin: 12px 0;
+        }
+
+        .related-list a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #38b2ac;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 12px 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+
+        .related-list a:hover {
+            border-color: #38b2ac;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .related-list a::before {
+            content: "→";
+            color: #38b2ac;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #38b2ac 0%, #319795 50%, #2c7a7b 100%);
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="1" fill="white" fill-opacity="0.1"/></svg>');
+            opacity: 0.4;
+        }
+
+        .cta-section h3 {
+            color: white;
+            font-size: 26px;
+            margin: 0 0 12px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.95);
+            margin: 0 0 30px;
+            font-size: 17px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #38b2ac;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2d3748;
+            color: #cbd5e0;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0 0 10px;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            margin: 20px 0 0;
+            padding: 0;
+        }
+
+        .footer-links a {
+            color: #cbd5e0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsive */
+        @media only screen and (max-width: 600px) {
+            .header {
+                padding: 35px 20px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .article-title {
+                font-size: 32px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .content h2 {
+                font-size: 24px;
+            }
+
+            .content p, .content li {
+                font-size: 16px;
+            }
+
+            .author-section {
+                padding: 20px;
+            }
+
+            .share-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .share-button {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="newsletter-badge">🤖 AI Tools Weekly</div>
+            <h1>AI tools and insights for developers</h1>
+            <p class="tagline">Building the future, one insight at a time</p>
+        </div>
+
+        <!-- Author Section -->
+        <div class="author-section">
+            <div class="author-avatar">AC</div>
+            <div class="author-info">
+                <div class="author-name">Alex Chen</div>
+                <div class="author-meta">
+                    <span>📅 Feb 21, 2026</span>
+                    <span>⏱️ 5 min read</span>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <h1 class="article-title">Coding for 20+ years, here is my honest take on AI tools and the minds</h1>
+            <p class="article-subtitle">Let&#x27;s talk about something that&#x27;s been keeping me up at night – and it&#x27;s not debugging legacy code at 2 AM. After two decades of coding, watching lang...</p>
+
+            <h1 id="the-reality-check-every-developer-needs-20-years-of-coding-meets-ai">The Reality Check Every Developer Needs: 20+ Years of Coding Meets AI</h1>
+<p>Let's talk about something that's been keeping me up at night – and it's not debugging legacy code at 2 AM. After two decades of <strong>coding</strong>, watching languages rise and fall, frameworks explode in popularity then fade into obscurity, I've witnessed another seismic shift. This time, it's AI tools like <strong>Claude</strong> that are fundamentally changing how we approach software development.</p>
+<h2 id="heres-why-this-matters-more-than-you-think">Here's Why This Matters More Than You Think</h2>
+<p>I've been through the dot-com boom, survived the transition from procedural to object-oriented programming, weathered the mobile revolution, and adapted to cloud-native architectures. Each shift felt significant, but this AI revolution? It's different. It's not just changing <em>what</em> we build – it's transforming <em>how</em> we think about building it.</p>
+<p>Since November 2022, like most developers, I dove headfirst into the AI pool. I tested every free model I could find, from Western powerhouses to Eastern innovations. What started as curiosity quickly became necessity. Last <strong>year</strong>, I subscribed to <strong>Claude</strong> Pro, then moved to extra usage, and early this <strong>year</strong> upgraded to <strong>Claude</strong> Max 5x. Now I'm seriously considering Max 20x. The progression tells a story – this isn't just a shiny new toy.</p>
+<p>Here's the uncomfortable truth: I use AI for about 85% of my professional <strong>coding</strong> work now. Let that sink in for a moment.</p>
+<h2 id="what-you-need-to-know-the-mindset-shift-is-everything">What You Need to Know: The Mindset Shift Is Everything</h2>
+<p><strong>The biggest mistake I see developers making isn't technical – it's psychological.</strong></p>
+<p>After 20+ years of <strong>coding</strong>, I can tell you that every major technological shift has required not just learning new tools, but fundamentally rewiring how we think about problems. The developers who thrived during the web revolution weren't necessarily the most technically gifted – they were the ones who understood that the rules had changed.</p>
+<p>AI <strong>coding</strong> tools aren't perfect. They make mistakes, sometimes spectacularly. They can generate code that looks right but fails edge cases you'd catch in your sleep. But here's what I've learned: <strong>perfection was never the point</strong>.</p>
+<p>The real insight? AI doesn't replace your expertise – it amplifies it. When I review AI-generated code, I'm not just checking syntax. I'm applying two decades of experience to spot the subtle issues, the architectural problems, the maintainability concerns that only come from <strong>years</strong> of making (and fixing) mistakes.</p>
+<p><strong>The mindset shift isn't about trusting AI blindly. It's about becoming an AI-augmented developer.</strong></p>
+<p>Think of it like this: You wouldn't hand your car keys to a teenager and expect them to navigate rush-hour traffic safely. But an experienced driver with GPS, traffic data, and real-time routing? That's a powerful combination. Your experience is the driver; AI is the enhanced navigation system.</p>
+<h2 id="how-to-apply-this-your-action-plan-for-ai-augmented-development">How to Apply This: Your Action Plan for AI-Augmented Development</h2>
+<p><strong>Start with the 80/20 rule.</strong> Use AI for the 80% of <strong>coding</strong> that's routine, repetitive, or follows established patterns. Reserve your human expertise for the 20% that requires critical thinking, architectural decisions, and creative problem-solving.</p>
+<p>Here's my practical approach:</p>
+<p><strong>Use AI for boilerplate and scaffolding.</strong> Let <strong>Claude</strong> generate your initial project structure, API endpoints, or database schemas. Then apply your experience to refine, optimize, and customize.</p>
+<p><strong>Leverage AI for code review and debugging.</strong> Paste your problematic code into <strong>Claude</strong> and ask it to identify potential issues. You'll be surprised how often it catches things you missed – not because it's smarter, but because it's not tired, frustrated, or tunnel-visioned like we sometimes get after hours of debugging.</p>
+<p><strong>Use AI as your rubber duck with superpowers.</strong> Explain your problem to <strong>Claude</strong> like you would to a junior developer. The act of articulation often reveals solutions, and AI might suggest approaches you hadn't considered.</p>
+<p><strong>Don't skip the verification step.</strong> This is crucial. AI-generated code should always go through your experienced eyes. Test thoroughly, especially edge cases. Your <strong>years</strong> of experience are invaluable here.</p>
+<h2 id="practical-application-put-this-into-practice-today">Practical Application: Put This Into Practice Today</h2>
+<p><strong>Week 1: Start Small</strong><br />
+Choose one routine <strong>coding</strong> task this week – maybe writing unit tests or creating API documentation. Use <strong>Claude</strong> to generate the initial version, then refine it with your expertise. Notice how much time you save and where you add the most value.</p>
+<p><strong>Week 2: Expand Gradually</strong><br />
+Try using AI for code reviews. Copy a function you wrote recently and ask <strong>Claude</strong> to identify potential improvements or issues. Compare its suggestions with your own assessment.</p>
+<p><strong>Week 3: Integrate Into Workflow</strong><br />
+Begin incorporating AI into your daily development routine. Use it for initial code generation, debugging assistance, and architectural brainstorming. But always – <em>always</em> – apply your critical thinking to the results.</p>
+<p><strong>The key is treating AI as a powerful junior developer who works incredibly fast but needs experienced oversight.</strong></p>
+<h2 id="the-uncomfortable-truth-about-our-industrys-future">The Uncomfortable Truth About Our Industry's Future</h2>
+<p>After <strong>coding</strong> for over 20 <strong>years</strong>, I've learned that resistance to change is the fastest path to irrelevance. The developers who dismissed the web as a fad, mobile as a niche, or cloud as unnecessary are the ones who struggled to adapt.</p>
+<p>AI <strong>coding</strong> tools aren't going away. They're getting better, faster, and more integrated into our workflows. The question isn't whether to adopt them – it's how quickly you can learn to work <em>with</em> them rather than against them.</p>
+<p>Your <strong>years</strong> of experience aren't becoming obsolete. They're becoming more valuable than ever, but in a different way. You're not just writing code anymore – you're orchestrating, reviewing, and architecting at a higher level.</p>
+<p>The future belongs to developers who can combine human expertise with AI capabilities. Don't let fear of change keep you from evolving with the industry you've spent <strong>years</strong> mastering.</p>
+<hr />
+<p><strong>What's your take on AI </strong>coding<strong> tools? Are you embracing the change or still on the fence? Reply with your thoughts – I'd love to hear about your experiences and concerns. Let's figure out this new landscape together.</strong></p>
+        </div>
+
+        <!-- Share Section -->
+        <div class="share-section">
+            <h3>📢 Found this valuable? Share it with your network</h3>
+            <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?text=Coding for 20+ years, here is my honest take on AI tools and the minds&url=https://the-edge-weekly.github.io/newsletters/ai-tools-weekly/2026-02-21-coding-for-20-years-here-is-my-honest-take-on-ai-tools-and.html"
+                   target="_blank" rel="noopener noreferrer" class="share-button twitter">
+                    🐦 Share on Twitter
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://the-edge-weekly.github.io/newsletters/ai-tools-weekly/2026-02-21-coding-for-20-years-here-is-my-honest-take-on-ai-tools-and.html"
+                   target="_blank" rel="noopener noreferrer" class="share-button linkedin">
+                    💼 Share on LinkedIn
+                </a>
+                <button onclick="copyLink()" class="share-button copy" id="copyBtn">
+                    📋 <span id="copyText">Copy Link</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Related Articles -->
+        <div class="related-section">
+            <h3>📚 You might also enjoy</h3>
+            <ul class="related-list" id="relatedArticles">
+                <!-- Populated by JavaScript -->
+            </ul>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h3>Enjoyed this article?</h3>
+            <p>Get insights like this delivered to your inbox every week</p>
+            <a href="https://81625e5b.sibforms.com/serve/MUIFAJHVDubGLUr_fFFu_CuBjzCMnQNjvv-p5LYExkE3lNOmLe8QGwz3-VDKh33tWbpzwYD-VLDZGxQcuKwlc2vx1EGf5xJGmwL2SaMz8exDYgMi3BG4Wgb-TK1Ds8bGT-e1KqPRKbFaK-cTN8HJmxqw77h17G1lSYq0D_qgzm68fZDo9jnVExYlvMDuwxpOYYVfI0g-VqNy8xKl" class="cta-button">Subscribe to AI Tools Weekly →</a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>🤖 <strong>AI Tools Weekly</strong> • AI tools and insights for developers</p>
+            <p style="font-size: 13px; color: #a0aec0;">© 2026 AI Tools Weekly. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Unsubscribe</a>
+                <a href="#">Email Preferences</a>
+                <a href="#">Archive</a>
+                <a href="#">About</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const btn = document.getElementById('copyBtn');
+                const text = document.getElementById('copyText');
+                btn.classList.add('copied');
+                text.textContent = 'Copied!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    text.textContent = 'Copy Link';
+                }, 2000);
+            });
+        }
+
+        // Load related articles
+        (function() {
+            const relatedByNewsletter = {
+                'solana_builders_edge': [
+                    { title: 'Building on Solana: Smart Contract Security Best Practices', url: '#' },
+                    { title: '5 Solana Protocols Every Developer Should Study', url: '#' },
+                    { title: 'Understanding Solana Program Derived Addresses', url: '#' }
+                ],
+                'ai_tools_weekly': [
+                    { title: 'The Rise of Local LLMs: Privacy-First AI Development', url: '#' },
+                    { title: 'Building AI Agents: A Practical Guide', url: '#' },
+                    { title: 'Top 10 AI Tools for Developers in 2024', url: '#' }
+                ],
+                'automate_this': [
+                    { title: 'Automating Your Development Workflow with GitHub Actions', url: '#' },
+                    { title: 'Building a Personal Automation Stack', url: '#' },
+                    { title: 'No-Code vs Low-Code: When to Use Each', url: '#' }
+                ]
+            };
+
+            const newsletterSlug = 'ai-tools-weekly';
+            const related = relatedByNewsletter[newsletterSlug] || [];
+            const container = document.getElementById('relatedArticles');
+
+            if (related.length === 0) {
+                container.parentElement.style.display = 'none';
+                return;
+            }
+
+            related.slice(0, 3).forEach(article => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = article.url;
+                a.textContent = article.title;
+                if (article.url === '#') {
+                    a.onclick = (e) => { e.preventDefault(); alert('More articles coming soon!'); };
+                }
+                li.appendChild(a);
+                container.appendChild(li);
+            });
+        })();
+    </script>
+</body>
+</html>
